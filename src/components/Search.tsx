@@ -62,7 +62,13 @@ export const Search = () => {
   return (
     <div className="search_section">
       <div className="search_bar">
-        <form id="form" method="POST">
+        <form
+          id="form"
+          onSubmit={(e) => {
+            e.preventDefault();
+            HandleOnSubmit();
+          }}
+        >
           <div className="input_group">
             <input
               type="text"
